@@ -65,7 +65,7 @@ if File.exist?(database_file)
       when 'mysql'
         gem "activerecord-jdbcmysql-adapter", :platforms => :jruby
       when /postgresql/
-        gem "pg", "~> 0.18.1", :platforms => [:mri, :mingw, :x64_mingw]
+        gem "pg", "~> 0.18.4", :platforms => [:mri, :mingw, :x64_mingw]
         gem "activerecord-jdbcpostgresql-adapter", :platforms => :jruby
       when /sqlserver/
         gem "tiny_tds", "~> 0.6.2", :platforms => [:mri, :mingw, :x64_mingw]
