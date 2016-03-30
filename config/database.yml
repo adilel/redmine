@@ -1,24 +1,31 @@
-production:
-  adapter: postgresql
-  database: redmine
-  host: localhost
-  username: adil
-  password: 123456789
-  encoding: utf8
 
 development:
   adapter: postgresql
-  database: redmine_dev
-  host: localhost
-  username: adil
-  password: 123456789
-  encoding: utf8
+  database: samantha
+  host: 127.0.0.1
+  port: 5432
+  pool: 25
+  timeout: 5000
+  username: geeksters
+  password: geeksters
 
 test:
-    adapter: postgresql
-    database: redmine_test
-    host: localhost
-    username: adil
-    password: 123456789
-    encoding: utf8
+  adapter: postgresql
+  database: samantha_test<%= ENV['TEST_ENV_NUMBER'] %>
+  host: 127.0.0.1
+  port: 5432
+  pool: 25
+  timeout: 5000
+  username: geeksters
+  password: geeksters
+
+production:
+  adapter: postgresql
+  database: samantha
+  host: 127.0.0.1
+  port: 5432
+  pool: 25
+  timeout: 5000
+  username: geeksters
+  password: geeksters
   #schema_search_path: <database_schema> (default - public)
